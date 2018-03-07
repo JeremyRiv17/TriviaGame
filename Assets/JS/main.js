@@ -60,7 +60,7 @@ audioElement.play();
     console.log(selected,gamestate)
     $(".maincontent").html(questions.question1);
     var ken = $("<img>")
-    ken.attr("src", "Assets/Images/Ken.jpg");
+    ken.attr("src", "Assets/Images/ken.jpg");
     $(".maincontent").append("<br>");
     $(".maincontent").append(ken);
     $("#answer1").text(answers1.answer1a);
