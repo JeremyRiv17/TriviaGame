@@ -50,6 +50,7 @@ var selected=""
 var gamestate=0
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "Assets/Images/audio.mp3");
+
 //populate main Content div
 console.log(selected,gamestate)
 $(".start").on("click", function(){
@@ -107,14 +108,14 @@ audioElement.play();
         
         alert("GAME OVER!!");
         $('.timer').empty() //not working
-        clearInterval(times)//not working
+        clearTimeout(times)//not working
         $(".maincontent").html("Your Score:"+score);
         $("#answer1").html("Question 1: Ken")
         $("#answer2").html("Question 2: India")
         $("#answer3").html("Question 3: Grappler")
         $("#answer4").html("Question 4: Shadaloo")
     },44000);
-clearInterval(times)// not working
+
 
 });
 
@@ -162,7 +163,7 @@ if(gamestate=1){
         console.log(selected,gamestate);
     });
 }
-if(gamestate===2){
+ if(gamestate=2){
     $("#answer1").on("click", function(){
         gamestate=3
         score++
@@ -206,7 +207,7 @@ if(gamestate===2){
         console.log(selected,gamestate);
     });
 }
-if(gamestate==="3"){
+if (gamestate=3){
     $("#answer1").on("click", function(){
         gamestate=4
         score++
@@ -250,52 +251,6 @@ if(gamestate==="3"){
         console.log(selected,gamestate);
     });
 }
-
-    $("#answer1").on("click", function(){
-        selected=""
-        gamestate=0
-        alert("GAME OVER!!");
-        $('.timer').empty()
-        $(".maincontent").html("Your Score:"+score);
-        $("#answer1").text("")
-        $("#answer2").text("")
-        $("#answer3").text("")
-        $("#answer4").text("")
-    });
-    $("#answer2").on("click", function(){
-        selected=""
-        score++
-        gamestate=0
-        alert("GAME OVER!!");
-        $('.timer').empty()
-        $(".maincontent").html("Your Score:"+score);
-        $("#answer1").text("")
-        $("#answer2").text("")
-        $("#answer3").text("")
-        $("#answer4").text("")
-    });
-    $("#answer3").on("click", function(){
-        selected=""
-        gamestate=0
-        alert("GAME OVER!!");
-        $('.timer').empty()
-        $(".maincontent").html("Your Score:"+score);
-        $("#answer1").text("")
-        $("#answer2").text("")
-        $("#answer3").text("")
-        $("#answer4").text("")
-    });
-    $("#answer4").on("click", function(){
-        selected=""
-        gamestate=0
-        alert("GAME OVER!!");
-        $('.timer').empty()
-        $(".maincontent").html("Your Score:"+score);
-        $("#answer1").text("")
-        $("#answer2").text("")
-        $("#answer3").text("")
-        $("#answer4").text("")
-    });
 
 //keep score
 //end game
